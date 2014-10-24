@@ -27,7 +27,8 @@
     <link rel="stylesheet" type="text/css" href="resources/css/ns-default.css" />
 	<link rel="stylesheet" type="text/css" href="resources/css/ns-style-other.css" />
 	<script src="resources/js/modernizr.custom.js"></script>
-	
+	<script src="resources/js/classie.js"></script>
+	<script src="resources/js/notificationFx.js"></script>
     <!--[if lt IE 9]>
         <script src="resources/js/html5.js"></script>
         <script src="resources/js/respond.js"></script>
@@ -42,11 +43,10 @@
                 <div class="header-wrapper">
                     <h1>Ruby <span>Assistant</span></h1>
                     <!--<p>With a smartphone and the right app, you can find any spot on TV or at theater. But the best app do a lot more. Try out my app.</p>-->
-                    <p>Bạn muốn xem gì hôm nay? Với 1 chiếc smartphone và ứng dụng thích hợp, bạn có thể tìm kiếm xem mình có thể xem gì ngoài rạp hoặc trên truyền hình. Nhưng ứng dụng tốt nhất sẽ làm được  hơn rất nhiều. Hãy trải nghiệm ngay!</p>
+                    <p>Bạn muốn xem gì hôm nay? Với 1 chiếc smartphone và ứng dụng thích hợp, bạn có thể tìm kiếm xem mình có thể xem gì ngoài rạp hoặc trên truyền hình. Nhưng ứng dụng tốt nhất sẽ làm được  hơn rất nhiều. Trải nghiệm ngay!</p>
                     <p class="autor"><a href="#">FTI Team</a></p>
                     <div class="buttons-wrapper">
-                        <!-- <a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/u/80802400/SpeakHere.plist" class="button">Download App</a> -->
-                        <a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/2ths36s04efuark/SpeakHere.plist" class="button">Download App</a>
+                        <a href="#" class="button">Download App</a>
                         <a href="#" class="button button-stripe">Learn more</a>
                     </div>
                 </div>
@@ -54,6 +54,7 @@
             </div>
             <!-- /.wrap -->
         </header>
+  
         <div class="spanning">
             <div class="promo clearfix">
                 <div class="wrap">
@@ -92,8 +93,7 @@
                         <h2>Discover</h2>
                         <p>Hôm nay xem gì? Ngoài rạp đang có phim gì hay? Tối nay vtv1 chiếu chương trình gì? Ngày mai có bóng đá không? Tất cả những câu hỏi trên không ít lần bạn đã bắt gặp trong đầu. Sẽ rất mất thời gian để tìm kiếm thống tin, tổng hợp và trả lời. Nhưng với Ruby, bạn chỉ cần hỏi, còn lại cứ để Ruby lo!</p>
                         <div class="discover-button clearfix">
-                           <!--  <a href=" itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/u/80802400/SpeakHere.plist" class="button button-download"> -->
-                            <a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/2ths36s04efuark/SpeakHere.plist" class="button button-download ">
+                            <a href="#" class="button button-download">
                                 <span class="button-download-title">Download for</span>
                                 <span class="button-download-subtitle">Apple iOS</span>
                             </a>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="discover-img">
-                        <div class="discover-img-inside"><img src="resources/upload/welcome3.jpg" height="300" width="400" alt="" style="margin: 100px auto;"></div>
+                        <div class="discover-img-inside"><img src="resources/upload/welcome3.jpg" height="300" width="400" alt="" style="margin-top:100px;margin-left:70px"></div>
                     </div>
                 </div>
                 <!-- /.wrap -->
@@ -115,9 +115,8 @@
                     <div class="video-title">Explore. Ruby in action</div>
                     <div class="video-subtitle">Just try it for yourself</div>
                     <div class="video-block">
-                      <iframe width="770" height="458" src="//www.youtube.com/embed/35IXJIIiP9E" frameborder="0" allowfullscreen></iframe>
-                      <!-- <iframe src="//player.vimeo.com/video/109192752?portrait=0" width="814" height="458" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  -->
-                    </div> 
+                       <iframe src="//player.vimeo.com/video/106575373?portrait=0" width="814" height="458" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
                     <div class="video-share-wrapper clearfix">
                        
                         <ul class="social-list clearfix">
@@ -171,7 +170,7 @@
                         </ul>
                     </div>
                     <div class="simple-img">
-                        <img src="resources/upload/ui.jpg" height="508" width="587" alt="" style="margin:150px auto;">
+                        <img src="resources/upload/ui.jpg" height="508" width="587" alt="" style="margin-top:150px;margin-left:70px; float: right">
                     </div>
                 </div>
                 <!-- /.wrap -->
@@ -203,20 +202,18 @@
     <script src="resources/js/library.js"></script>
     <script src="resources/js/script.js"></script>
     <script src="resources/js/retina.js"></script>
-   	<script src="resources/js/classie.js"></script>
-	<script src="resources/js/notificationFx.js"></script>
     <script type="text/javascript">
     function submitEmail() {
 		var email = $("#email").val();
 		$.ajax({
 			type : "POST",
-			url : "/ruby/addEmail",
+			url : "/qa/addEmail",
 			contentType : "application/x-www-form-urlencoded;charset=UTF-8",
 			data : "email=" + encodeURIComponent(email),
 			success : function(result) {
 				// create the notification
 				var notification = new NotificationFx({
-					message : '<p>Tuyệt vời! Bạn đã có 1 lựa chọn đúng đắn. Chúng tôi sẽ email cho bạn khi có cập nhật mới :)</p>',
+					message : '<p>I am using a beautiful spinner from <a href="http://tobiasahlin.com/spinkit/">SpinKit</a></p>',
 					layout : 'other',
 					effect : 'boxspinner',
 					ttl : 9000,
@@ -225,7 +222,7 @@
 						bttn.disabled = false;
 					}
 				});
-				$("#email").val("");
+
 				// show the notification
 				notification.show();
 
@@ -237,6 +234,6 @@
 			}
 		});
 	};
-    </script> 
+    </script>
 </body>
 </html>

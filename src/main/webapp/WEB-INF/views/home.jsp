@@ -73,12 +73,12 @@
                             <img src="resources/upload/pin.png" height="32" width="24" alt="">
                             <h5>Places</h5>
                             <!--<p>Seamlessly empower fully researched growth strategies and interoperable internal sources.</p>-->
-                            <p>Có thể dựa vào địa điểm hiện tại để đưa ra câu trả lời tốt nhất</p>
+                            <p>Có thể dựa vào địa điểm hiện tại để đưa ra câu trả lời tốt nhất (đang phát triển)</p>
                         </div>
                         <div class="promo-column">
                             <img src="resources/upload/saturn.png" height="32" width="32" alt="">
                             <h5>Context</h5>
-                            <p>Ruby có thể học và hiểu bạn hơn sau mỗi lần trả lời bạn.  </p>
+                            <p>Ruby có thể học và hiểu bạn hơn sau mỗi lần trả lời bạn. (đang phát triển)</p>
                         </div>
                         
                     </div>
@@ -97,10 +97,10 @@
                                 <span class="button-download-title">Download for</span>
                                 <span class="button-download-subtitle">Apple iOS</span>
                             </a>
-                            <a href="#" class="button button-download android">
+                            <%--<a href="#" class="button button-download android">
                                 <span class="button-download-title">Download for</span>
                                 <span class="button-download-subtitle">Android</span>
-                            </a>
+                            </a>--%>
                         </div>
                     </div>
                     <div class="discover-img">
@@ -112,8 +112,8 @@
             <!-- /.discover clearfix -->
             <div class="video clearfix">
                 <div class="wrap">
-                    <div class="video-title">Explore. Ruby in action</div>
-                    <div class="video-subtitle">Just try it for yourself</div>
+                    <div class="video-title">Ruby - chào mừng 25 năm FPT </div>
+                    <%--<div class="video-subtitle">Just try it for yourself</div>--%>
                     <div class="video-block">
                       <iframe width="770" height="458" src="//www.youtube.com/embed/35IXJIIiP9E" frameborder="0" allowfullscreen></iframe>
                       <!-- <iframe src="//player.vimeo.com/video/109192752?portrait=0" width="814" height="458" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>  -->
@@ -171,7 +171,7 @@
                         </ul>
                     </div>
                     <div class="simple-img">
-                        <img src="resources/upload/ui.jpg" height="508" width="587" alt="" style="margin:150px auto;">
+                        <img src="resources/upload/ui.jpg" height="508" width="587" alt="" style="margin:150px auto; border: 2px solid; border-radius: 25px;">
                     </div>
                 </div>
                 <!-- /.wrap -->
@@ -184,7 +184,8 @@
                             <input type="email" id ="email" name="email" placeholder="ducna13@fpt.com.vn" class="input-text">
                             <input type="button" class="button" onclick="submitEmail()" value="Subscribe">
                     </div>
-                    <p>If you want to recieve monthly updates from us just pop your email in the box. We think that spam is for jerks. And we are no jerks.</p>
+                   <%-- <p>If you want to recieve monthly updates from us just pop your email in the box. We think that spam is for jerks. And we are no jerks.</p>--%>
+                    <p>Nếu bạn muốn nhận được update của chúng tôi, hãy để lại email của bạn nhé. Chúng tôi nghĩ spam thật là ngốc nghếch. Và chúng tôi không phải là những kẻ ngốc.</p>
                 </div>
                 <!-- /.wrap -->
             </div>

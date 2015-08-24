@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Handles requests for the application home page.
@@ -37,12 +38,21 @@ public class HomeController {
 		
 		return "home";
 	}
-	
-	@RequestMapping(value = "/addEmail", method = RequestMethod.POST)
+
+	@RequestMapping(value = "/generator", method = RequestMethod.POST , produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public SGResult generate(@RequestParam("keyword") String keyword) {
+		System.out.println("Email: " + keyword);
+		SGResult sgResult = new SGResult();
+		sgResult.setName("test");
+		return  sgResult;
+	}
+
+	/*@RequestMapping(value = "/addEmail", method = RequestMethod.POST)
 	public String addEmail(@RequestParam("email") String email) {
 		System.out.println("Email: " + email);
 		Helper.appendFile(emailFile, email);
 		return "home";
-	}
+	}*/
 	
 }
